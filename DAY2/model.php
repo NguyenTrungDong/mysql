@@ -6,7 +6,7 @@ function displayResult($title, $stmt) {
     echo "<table border='1'>";
     $firstRow = true;
     
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  // Trả về kết quả truy vấn dạng mảng kết hợp với key là tên cột và value
         if ($firstRow) {
             echo "<tr>";
             foreach ($row as $key => $value) {
